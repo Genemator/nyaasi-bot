@@ -1,6 +1,10 @@
 const mongoose = require('mongoose')
 const { Schema } = mongoose
 
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
+
 const connection = mongoose.createConnection(process.env.DATABASE_URL, {
   useNewUrlParser: true
 })
